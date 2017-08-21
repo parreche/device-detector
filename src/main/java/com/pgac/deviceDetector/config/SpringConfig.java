@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = "com.pgac.deviceDetector")
+@ComponentScan(basePackages={"com.pgac.deviceDetector.controller","com.pgac.deviceDetector.filter", "net.sourceforge.wurfl.core"})
 public class SpringConfig extends WebMvcConfigurerAdapter {
 
 	@Override

@@ -18,6 +18,11 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang.Validate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
 import net.sourceforge.wurfl.core.cache.CacheProvider;
 import net.sourceforge.wurfl.core.exc.WURFLRuntimeException;
 import net.sourceforge.wurfl.core.matchers.MatcherManager;
@@ -33,13 +38,9 @@ import net.sourceforge.wurfl.core.resource.WURFLResources;
 import net.sourceforge.wurfl.core.resource.XMLResource;
 import net.sourceforge.wurfl.core.web.WurflWebConstants;
 
-import org.apache.commons.lang.Validate;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
-
 @Component(value="WURFLEngine")
 public class GeneralWURFLEngine implements WURFLEngine, WurflWebConstants {
+	
 	private final transient Logger logger = LoggerFactory.getLogger(getClass());
     private String[] capabilityFilter = null;
 

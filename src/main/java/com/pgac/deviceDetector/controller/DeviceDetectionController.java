@@ -3,20 +3,18 @@ package com.pgac.deviceDetector.controller;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-import net.sourceforge.wurfl.core.GeneralWURFLEngine;
-import net.sourceforge.wurfl.core.WURFLEngine;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.Device;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import net.sourceforge.wurfl.core.WURFLEngine;
+
 @Controller
 public class DeviceDetectionController {
 
-	@Autowired
-	GeneralWURFLEngine engine;
+	@Resource(name="WURFLEngine")
+	WURFLEngine engine;
 	
     @RequestMapping("/detect-device")
     public @ResponseBody String detectDevice(Device device, HttpServletRequest request) {

@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.2.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 	<bean id="WURFLEngine" class="net.sourceforge.wurfl.core.GeneralWURFLEngine">
 		<constructor-arg index="0"
-			value="classpath:/deviceDetector/src/main/resources/wurfl.zip" />
+			value="" />
 		<property name="capabilityFilter">
 			<set>
 				<value>device_os</value>
